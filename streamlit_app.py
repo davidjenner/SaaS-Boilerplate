@@ -1,4 +1,7 @@
 import streamlit as st
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 
 # Set the title of the app
 st.title("My Streamlit App")
@@ -41,9 +44,6 @@ if st.button("Submit"):
                     st.write("File uploaded successfully!")
 
                     # Add a plot (example with matplotlib)
-                    import matplotlib.pyplot as plt
-                    import numpy as np
-
                     x = np.linspace(0, 10, 100)
                     y = np.sin(x)
 
@@ -52,12 +52,9 @@ if st.button("Submit"):
                     st.pyplot(fig)
 
                     # Add a dataframe (example with pandas)
-                    import pandas as pd
-
                     data = {
                         "Column 1": [1, 2, 3, 4],
                             "Column 2": [10, 20, 30, 40]
                             }
                             df = pd.DataFrame(data)
                             st.write(df)
-                            
